@@ -1,0 +1,108 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+// CONTAINER VARIABLE
+$largureContainer: reset.toRem(1310); // Adicionar 40px no valor do container para uso de padding no responsivo 
+
+// VARIABLES
+$ColorMain:#6D68AD;
+$ColorOne:#5C5C5C;
+$ColorTwo:#4A4A4A;
+$ColorThree:#CCCCCC;
+$ColorFour:#ffffff;
+$ColorSix:#78C3B6;
+$ColorSeven:#F4DB94;
+
+// DISPLAY FLEX
+@mixin FlexBetCen {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+} 
+
+@mixin FlexCenCen {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} 
+
+
+/**/
+
+body {
+   background:$ColorFour;
+   font-family: 'Open Sans', sans-serif;
+   color:$ColorOne;
+   font-weight:400;
+   letter-spacing: 0px;
+}
+
+p {
+   font-family: 'Open Sans', sans-serif;
+   color:$ColorOne;
+   line-height: 1.5;
+   font-weight: 400;
+   margin-bottom: 25px;
+   font-size: reset.toRem(20);
+   color: $ColorOne;
+}
+
+
+
+// BREAKPOINTS
+
+@mixin breakpoint($point) {
+    @if $point == smashDesktopLarge {
+      @media screen and (max-width: 87.5rem) { @content ; } // 1400px
+   }
+   @else if $point == smashDesktop {
+      @media (max-width: 75rem) { @content ; } //1200px
+   }
+   @else if $point == smashLaptop {
+      @media (max-width: 64rem) { @content ; } //1024px
+   }
+     @else if $point == smashTabletBig {
+      @media (max-width: 56.25rem) { @content ; } //900px
+   }
+    @else if $point == smashTablet {
+      @media (max-width: 37.5rem)  { @content ; } //600px
+   }
+   @else if $point == smashMobile {
+      @media (max-width: 25rem)  { @content ; } //400px
+   }
+
+   @else if $point == smashContainer {
+    @media (max-width: $largureContainer)  { @content ; }
+   }
+}
+
+
+
+/*CONTAINER*/
+
+.container {
+  margin:0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+   max-width: $largureContainer;
+}
+
+// largureContainer -> BREAKPOINT DA LARGURA DO CONTAINER
+
+// LAPTOP - 1024px
+@include breakpoint(smashLaptop) {
+   p {
+      font-size: reset.toRem(18);
+   }
+}
+
+// TABLET BIG - 900px
+@include breakpoint(smashTabletBig) {
+   p {
+      font-size: reset.toRem(16);
+   }
+}
+
