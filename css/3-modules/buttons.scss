@@ -1,0 +1,19 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/*
+  ========================================
+  BUTTONS
+  ========================================
+*/
+
+.buttonType1 {
+  font-size: reset.toRem(14);
+  font-weight: 600;
+  color: main.$ColorTwo;
+  padding: 10px 20px;
+  height: 45px;
+  border: 2px solid main.$ColorMain;
+  background: main.$ColorMain;
+  border-radius: 30px;
+}

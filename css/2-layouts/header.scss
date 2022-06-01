@@ -6,3 +6,203 @@
   HEADER
   ========================================
 */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  border-bottom: #ffffff;
+  transition: 0.3s all;
+  
+  & .container {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s all;
+
+    & .logo a {
+      display: block
+    }
+    
+    & .navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 25px;
+
+      & nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & li a {
+          font-size: reset.toRem(14);
+          font-weight: 600;
+          color: main.$ColorTwo;
+          padding: 10px 20px;
+
+
+          &:hover {
+            color: main.$ColorOne;
+          }
+        }
+      }
+
+      .special_links {
+        display: flex;
+        gap: 5px 10px;
+        
+        & .no_bg {
+          background: transparent;
+        }
+      }
+    }
+  } //CONTAINER
+
+  &.fixed {
+    background: rgb(255 255 255 / 90%);
+
+    & .container {
+      height: 90px;
+
+      & .navigation {  
+        & nav ul {
+          & li a {
+            font-size: reset.toRem(18);
+          }
+        }
+
+        & .buttonType1 {
+          font-size: reset.toRem(16);
+        }
+      }
+    }
+  }
+}
+
+/********
+RESPONSIVO
+********/
+
+/* DESKTOP - 1200px*/ 
+
+@include main.breakpoint(smashDesktop) {
+  header {
+    & .container {
+      & .navigation {
+        & nav ul {
+          & li a {
+            font-size: reset.toRem(18);
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) { 
+  header {
+    & .container {
+      & .navigation {
+        position: relative;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+        & .buttonType1 a {
+          font-size: reset.toRem(16);
+        }
+
+        & .menu {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 10px;
+        }
+
+        & .button {
+          height: 38px;
+          width: 38px;
+          background: main.$ColorMain url("../img/menu_icon.png") center no-repeat;
+          transition: 0.3s all;
+          border-radius: 5px;
+        }
+
+        & nav {
+          position: absolute;
+          right: 0;
+          top: 38px;
+          width: 200px;
+          background: #ededed;
+          display: flex;
+          flex-wrap: wrap;
+          opacity: 0;
+          z-index: -1;
+          visibility: collapse;
+          transition: 0.2s all;
+          border-radius: 6px;
+          box-shadow: -2px 1px 9px -4px #000000;
+          border-radius: 5px 5px 5px 5px;
+
+          & ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            & li a {
+              width: 100%;
+              display: block;
+              font-size: reset.toRem(16)!important;
+            }
+          }
+        }
+
+        & .menu.ativo {
+          & nav {
+            opacity: 1;
+            visibility: visible;
+            z-index: inherit;
+          }
+
+          & .button {
+            background: main.$ColorMain url("../img/menu-close.png") center no-repeat;
+          }
+        }
+      } // NAVIGATION
+    }
+
+    &.fixed {
+      & .container {
+        height: 120px;
+
+        & .buttonType1 a {
+          font-size: reset.toRem(16);
+        }
+      }
+    }
+  }
+
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  header {
+    & .container {
+      height: 110px;
+
+      & .buttonType1 a {
+        width: auto;
+      }
+    }
+
+    &.fixed {
+      & .container {
+        height: 110px;
+      }
+    }
+  }
+}

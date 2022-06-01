@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 /*RESET*/
 *, *:before, *:after {
   box-sizing: border-box;
@@ -92,21 +92,20 @@ img {
 
 /**/
 body {
-  background: #ffffff;
-  font-family: "Open Sans", sans-serif;
-  color: #5C5C5C;
+  background: #05193b;
+  font-family: "Montserrat", sans-serif;
+  color: #00193C;
   font-weight: 400;
-  letter-spacing: 0px;
+  letter-spacing: 0.1em;
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
-  color: #5C5C5C;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  margin-bottom: 25px;
-  font-size: 1.25rem;
-  color: #5C5C5C;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #00193C;
 }
 
 /*CONTAINER*/
@@ -117,7 +116,7 @@ p {
 }
 
 .container {
-  max-width: 81.875rem;
+  max-width: 82.5rem;
 }
 
 @media (max-width: 64rem) {
@@ -135,6 +134,151 @@ p {
   HEADER
   ========================================
 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  border-bottom: #ffffff;
+  transition: 0.3s all;
+}
+header .container {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s all;
+}
+header .container .logo a {
+  display: block;
+}
+header .container .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 25px;
+}
+header .container .navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .navigation nav ul li a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+header .container .navigation nav ul li a:hover {
+  color: #00193C;
+}
+header .container .navigation .special_links {
+  display: flex;
+  gap: 5px 10px;
+}
+header .container .navigation .special_links .no_bg {
+  background: transparent;
+}
+header.fixed {
+  background: rgba(255, 255, 255, 0.9);
+}
+header.fixed .container {
+  height: 90px;
+}
+header.fixed .container .navigation nav ul li a {
+  font-size: 1.125rem;
+}
+header.fixed .container .navigation .buttonType1 {
+  font-size: 1rem;
+}
+
+/********
+RESPONSIVO
+********/
+/* DESKTOP - 1200px*/
+@media (max-width: 75rem) {
+  header .container .navigation nav ul li a {
+    font-size: 1.125rem;
+    padding: 10px 15px;
+  }
+}
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  header .container .navigation {
+    position: relative;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+  header .container .navigation .buttonType1 a {
+    font-size: 1rem;
+  }
+  header .container .navigation .menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  header .container .navigation .button {
+    height: 38px;
+    width: 38px;
+    background: #56D7AF url("../img/menu_icon.png") center no-repeat;
+    transition: 0.3s all;
+    border-radius: 5px;
+  }
+  header .container .navigation nav {
+    position: absolute;
+    right: 0;
+    top: 38px;
+    width: 200px;
+    background: #ededed;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    z-index: -1;
+    visibility: collapse;
+    transition: 0.2s all;
+    border-radius: 6px;
+    box-shadow: -2px 1px 9px -4px #000000;
+    border-radius: 5px 5px 5px 5px;
+  }
+  header .container .navigation nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  header .container .navigation nav ul li a {
+    width: 100%;
+    display: block;
+    font-size: 1rem !important;
+  }
+  header .container .navigation .menu.ativo nav {
+    opacity: 1;
+    visibility: visible;
+    z-index: inherit;
+  }
+  header .container .navigation .menu.ativo .button {
+    background: #56D7AF url("../img/menu-close.png") center no-repeat;
+  }
+  header.fixed .container {
+    height: 120px;
+  }
+  header.fixed .container .buttonType1 a {
+    font-size: 1rem;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  header .container {
+    height: 110px;
+  }
+  header .container .buttonType1 a {
+    width: auto;
+  }
+  header.fixed .container {
+    height: 110px;
+  }
+}
 /* DESKTOP LARGE - 1400px*/
 /* DESKTOP - 1200px*/
 /* LAPTOP - 1024px*/
@@ -151,6 +295,127 @@ p {
   INDEX
   ========================================
 */
+.banner {
+  height: 810px;
+  background: #05193b url("../images/banner.jpg") right center no-repeat;
+}
+.banner .container {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 22px 0;
+}
+.banner .container h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+/*
+  ========================================
+  A EMPRESA
+  ========================================
+*/
+.contentEmpresa {
+  background: #ffffff url("../images/bg_empresa.jpg") left center no-repeat;
+}
+.contentEmpresa .container {
+  height: 560px;
+  display: flex;
+  justify-content: flex-end;
+}
+.contentEmpresa .container .content {
+  background: #ffffff;
+  width: 550px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 75px;
+}
+.contentEmpresa .container .content h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #00193C;
+  padding: 0 0 0 35px;
+  background: url("../images/retangulo.png") left center no-repeat;
+  margin-bottom: 25px;
+}
+.contentEmpresa .container .content h1 mark {
+  color: #56D7AF;
+  background: none;
+  font-weight: 700;
+}
+.contentEmpresa .container .content p {
+  margin-bottom: 50px;
+}
+.contentEmpresa .container .content p b {
+  font-weight: 700;
+}
+
+/*
+  ========================================
+  NUMEROS
+  ========================================
+*/
+.contentNumbers {
+  padding: 100px 0 180px 0;
+  background: #05193b;
+}
+.contentNumbers .container ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px 15px;
+}
+.contentNumbers .container ul li {
+  color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-content: flex-start;
+  border: 1px solid red;
+}
+.contentNumbers .container ul li span {
+  display: block;
+  width: 100%;
+  color: #56D7AF;
+  font-size: 3.125rem;
+  font-weight: 700;
+  height: 70px;
+  margin-bottom: 15px;
+}
+.contentNumbers .container ul li span.text_down {
+  color: #ffffff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  height: auto;
+}
+.contentNumbers .container ul li span.text_down small {
+  display: block;
+  width: 100%;
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+/*
+  ========================================
+  BUTTONS
+  ========================================
+*/
+.buttonType1 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 10px 20px;
+  height: 45px;
+  border: 2px solid #56D7AF;
+  background: #56D7AF;
+  border-radius: 30px;
+}
+
 /*
   ========================================
   INPUTS
@@ -167,17 +432,17 @@ p {
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   padding: 0.625rem 0.75rem;
-  color: #ffffff;
+  color: #00193C;
   transition: 0.3s all;
-  background: #6D68AD;
+  background: #56D7AF;
   background-repeat: no-repeat;
-  border: 1px solid #6D68AD;
+  border: 1px solid #56D7AF;
   width: 200px;
 }
 
 .inputs input[type=submit]:hover {
-  background: #78C3B6;
-  border: 1px solid #78C3B6;
+  background: #00193C;
+  border: 1px solid #00193C;
   background-repeat: no-repeat;
 }
 
@@ -185,7 +450,6 @@ p {
 .inputs .inputs-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
 }
 .inputs .margin {
@@ -214,9 +478,9 @@ p {
   font-size: 1.25rem;
   font-weight: 700;
   background: #ffffff;
-  border: 2px solid #78C3B6;
+  border: 2px solid #00193C;
   outline: none;
-  color: #5C5C5C;
+  color: #00193C;
   font-family: "Open Sans", sans-serif;
   transition: all 0.5s ease;
   border-radius: 30px;
@@ -228,12 +492,12 @@ p {
 
 .inputs textarea:focus,
 .inputs input:focus {
-  border: 2px solid #6D68AD;
+  border: 2px solid #56D7AF;
 }
 
 /**/
 .inputs ::-webkit-input-placeholder {
-  color: #5C5C5C;
+  color: #00193C;
 }
 
 /* TABLET - 600px*/

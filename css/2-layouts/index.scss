@@ -6,3 +6,127 @@
   INDEX
   ========================================
 */
+
+.banner {
+  height: 810px;
+  background: main.$ColorThree url("../images/banner.jpg") right center no-repeat;
+
+  & .container {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 22px 0;
+
+    & h1 {
+      width: 100%;
+      font-size: reset.toRem(40);
+      font-weight: 800;
+      color: main.$ColorTwo;
+      letter-spacing: 0.1em;
+    }
+  }
+}
+
+/*
+  ========================================
+  A EMPRESA
+  ========================================
+*/
+
+.contentEmpresa {
+  background: main.$ColorTwo url("../images/bg_empresa.jpg") left center no-repeat;
+
+  & .container {
+    height: 560px;
+    display: flex;
+    justify-content: flex-end;
+
+    & .content {
+      background: #ffffff;
+      width: 550px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 0 0 75px;
+
+      & h1 {
+        font-size: reset.toRem(48);
+        font-weight: 300;
+        color: main.$ColorOne;
+        padding: 0 0 0 35px;
+        background: url("../images/retangulo.png") left center no-repeat;
+        margin-bottom: 25px;
+
+        & mark {
+          color: main.$ColorMain;
+          background: none;
+          font-weight: 700;
+        }
+      }
+
+      & p {
+        margin-bottom: 50px;
+
+        & b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+
+/*
+  ========================================
+  NUMEROS
+  ========================================
+*/
+
+.contentNumbers {
+  padding: 100px 0 180px 0;
+  background: main.$ColorThree;
+
+  & .container {
+ 
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px 15px;
+
+      & li {
+        color:main.$ColorTwo;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-content:flex-start;
+        border: 1px solid red;
+
+        & span {
+          display: block;
+          width: 100%;
+          color:main.$ColorMain;
+          font-size: reset.toRem(50);
+          font-weight: 700;
+          height: 70px;
+          margin-bottom: 15px;
+
+          &.text_down {
+            color:main.$ColorTwo;
+            font-size: reset.toRem(15);
+            font-weight: 700;
+            height: auto;
+
+            & small {
+              display: block;
+              width: 100%;
+              font-size: reset.toRem(15);
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+}

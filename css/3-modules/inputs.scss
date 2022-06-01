@@ -18,7 +18,7 @@
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     padding: reset.toRem(10) reset.toRem(12);
-    color: main.$ColorFour;
+    color: main.$ColorOne;
     transition: 0.3s all;
     background: main.$ColorMain;
     background-repeat: no-repeat;
@@ -28,8 +28,8 @@
 
 
 .inputs input[type="submit"]:hover {
-    background: main.$ColorSix; 
-    border: 1px solid main.$ColorSix;
+    background: main.$ColorOne; 
+    border: 1px solid main.$ColorOne;
     background-repeat: no-repeat;
 }
 
@@ -38,7 +38,8 @@
 .inputs {
 
     & .inputs-content {
-        @include main.FlexBetCen;
+        display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     
@@ -70,7 +71,7 @@
       font-size: reset.toRem(20);
       font-weight: 700;
       background:#ffffff;
-      border: 2px solid main.$ColorSix;
+      border: 2px solid main.$ColorOne;
       outline: none;
       color: main.$ColorOne;
       font-family: "Open Sans", sans-serif;
