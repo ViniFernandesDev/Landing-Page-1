@@ -154,6 +154,9 @@ header .container {
 header .container .logo a {
   display: block;
 }
+header .container .logo a img {
+  width: 230px;
+}
 header .container .navigation {
   display: flex;
   justify-content: space-between;
@@ -198,15 +201,16 @@ RESPONSIVO
 }
 /* DESKTOP - 1200px*/
 @media (max-width: 75rem) {
-  header special_links .buttonType1 {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #ffffff;
-    padding: 10px 20px;
-    height: 45px;
-    border: 2px solid #56D7AF;
-    background: #56D7AF;
-    border-radius: 30px;
+  header .container .navigation {
+    gap: 0 5px;
+  }
+  header .container .logo a img {
+    width: 180px;
+  }
+  header .container .special_links .buttonType1 {
+    font-size: 0.75rem;
+    height: 38px;
+    padding: 10px 14px;
   }
 }
 /* LAPTOP - 1024px*/
@@ -228,7 +232,7 @@ RESPONSIVO
   header .container .navigation .button {
     height: 38px;
     width: 38px;
-    background: #56D7AF url("../img/menu_icon.png") center no-repeat;
+    background: #56D7AF url("../images/menu_icon.png") center no-repeat;
     transition: 0.3s all;
     border-radius: 5px;
   }
@@ -257,6 +261,7 @@ RESPONSIVO
     width: 100%;
     display: block;
     font-size: 1rem !important;
+    color: #00193C;
   }
   header .container .navigation .menu.ativo nav {
     opacity: 1;
@@ -264,25 +269,35 @@ RESPONSIVO
     z-index: inherit;
   }
   header .container .navigation .menu.ativo .button {
-    background: #56D7AF url("../img/menu-close.png") center no-repeat;
-  }
-  header.fixed .container {
-    height: 120px;
-  }
-  header.fixed .container .buttonType1 a {
-    font-size: 1rem;
+    background: #56D7AF url("../images/menu-close.png") center no-repeat;
   }
 }
-/* TABLET BIG - 900px*/
-@media (max-width: 56.25rem) {
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
   header .container {
-    height: 110px;
+    padding-top: 25px;
   }
-  header .container .buttonType1 a {
-    width: auto;
+  header .container .navigation {
+    padding-top: 15px;
   }
-  header.fixed .container {
-    height: 110px;
+  header .container .navigation nav {
+    top: 52px;
+  }
+  header .container .navigation .special_links {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    gap: 8px 4%;
+    padding: 10px 10px;
+  }
+  header .container .navigation .special_links .buttonType1 {
+    font-size: 0.8125rem;
+    width: 48%;
+    text-align: center;
+    height: 31px;
+    padding: 5px 5px;
   }
 }
 /* DESKTOP LARGE - 1400px*/

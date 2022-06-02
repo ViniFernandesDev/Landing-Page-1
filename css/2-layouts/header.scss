@@ -24,7 +24,11 @@ header {
     transition: 0.3s all;
 
     & .logo a {
-      display: block
+      display: block;
+
+      & img {
+        width: 230px;
+      }
     }
     
     & .navigation {
@@ -90,15 +94,22 @@ RESPONSIVO
 
 /* DESKTOP - 1200px*/ 
 @include main.breakpoint(smashDesktop) {
-  header special_links .buttonType1 {
-    font-size: reset.toRem(14);
-    font-weight: 600;
-    color: main.$ColorTwo;
-    padding: 10px 20px;
-    height: 45px;
-    border: 2px solid main.$ColorMain;
-    background: main.$ColorMain;
-    border-radius: 30px;
+  header {
+    & .container {
+      & .navigation {
+        gap:0 5px;
+      }
+
+      & .logo a img {
+          width: 180px;
+      }
+  
+      & .special_links .buttonType1 {
+        font-size: reset.toRem(12);
+        height: 38px;
+        padding: 10px 14px;
+      }
+    }
   }
 }
 
@@ -125,7 +136,7 @@ RESPONSIVO
         & .button {
           height: 38px;
           width: 38px;
-          background: main.$ColorMain url("../img/menu_icon.png") center no-repeat;
+          background: main.$ColorMain url("../images/menu_icon.png") center no-repeat;
           transition: 0.3s all;
           border-radius: 5px;
         }
@@ -155,6 +166,7 @@ RESPONSIVO
               width: 100%;
               display: block;
               font-size: reset.toRem(16)!important;
+              color: main.$ColorOne;
             }
           }
         }
@@ -167,40 +179,47 @@ RESPONSIVO
           }
 
           & .button {
-            background: main.$ColorMain url("../img/menu-close.png") center no-repeat;
+            background: main.$ColorMain url("../images/menu-close.png") center no-repeat;
           }
         }
       } // NAVIGATION
-    }
-
-    &.fixed {
-      & .container {
-        height: 120px;
-
-        & .buttonType1 a {
-          font-size: reset.toRem(16);
-        }
-      }
     }
   }
 
 }
 
-/* TABLET BIG - 900px*/ 
-@include main.breakpoint(smashTabletBig) {
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
   header {
     & .container {
-      height: 110px;
+      padding-top: 25px;
 
-      & .buttonType1 a {
-        width: auto;
-      }
-    }
+      & .navigation {
+        padding-top: 15px;
 
-    &.fixed {
-      & .container {
-        height: 110px;
+        & nav {
+          top: 52px;
+        }
+
+        & .special_links {
+          position: fixed;
+          width: 100%;
+          top:0;
+          left: 0;
+          flex-wrap: wrap;
+          gap: 8px 4%;
+          padding: 10px 10px;
+
+          & .buttonType1 {
+            font-size: reset.toRem(13);
+            width: 48%;
+            text-align: center;
+            height: 31px;
+            padding: 5px 5px;
+          }
+        }
       }
+
     }
   }
 }

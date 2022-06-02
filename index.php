@@ -134,7 +134,7 @@
     </div><!--container-->
 </section><!--contentFundos-->
 
-<section class="contentNewsletter">
+<section id="section4" class="contentNewsletter">
     <div class="container">
 
         <div class="content">
