@@ -4,16 +4,19 @@
 
         <section class="display">
             <div class="left">
-                <a href="#secao">
-                    <img src="images/logo.jpg" alt="Logo">
-                </a>
+
+                <div class="logo">
+                    <a href="#secao">
+                        <img src="images/logo.svg" alt="Logo">
+                    </a>
+                </div><!--logo-->
 
                 <a href="#">Lorem Ipsum</a>
 
                 <ul class="social">
-                    <li><a href="#" target="_blank"><img src="images/facebook.png" alt="Facebook"></a></li>
-                    <li><a href="#" target="_blank"><img src="images/instagram.png" alt="Instagram"></a></li>
-                    <li><a href="#" target="_blank"><img src="images/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="#" target="_blank"><img src="images/ico_facebook.png" alt="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="images/ico_insta.png" alt="Instagram"></a></li>
+                    <li><a href="#" target="_blank"><img src="images/ico_twitter.png" alt="Twitter"></a></li>
                 </ul><!--social-->
             </div><!--left-->
 
@@ -22,10 +25,10 @@
                     <h2>Menu</h2>
 
                     <ul>
-                        <li><a href="#section1">A EMPRESA</a></li>
-                        <li><a href="#section2">NOSSOS FUNDOS</a></li>
-                        <li><a href="#section3">CONTEÚDOS</a></li>
-                        <li><a href="#section4">CONTATO</a></li>
+                        <li><a href="#section1">A empresa</a></li>
+                        <li><a href="#section2">Nossos fundos</a></li>
+                        <li><a href="#section3">Conteúdos</a></li>
+                        <li><a href="#section4">Contato</a></li>
                     </ul>
                 </div>
 
@@ -47,7 +50,52 @@
     </div><!--container-->
 </footer>
 
-<script defer src="js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<!--header fixa-->
+<script>
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 120) {
+            $('header').addClass('fixed');
+        } else {
+            $('header').removeClass('fixed');
+        }
+    });
+</script>
+
+<!-- MENU RESPONSIVO -->
+<script>
+    $('#toggle').click(function () {
+        $(this).toggleClass('active');
+        $('#overlay').toggleClass('open');
+    });
+
+    $(".overlay ul li a").click(function () {
+        $("#toggle").removeClass("active");
+        $("#overlay").removeClass("open");
+    })
+
+    $(document).ready(function() {
+        $('.menu').click(function() {
+            $(this).toggleClass("ativo");
+        });
+    });
+</script>
+
+<!-- HEADER SCROLL -->
+<script>
+$('.navigation a[href^="#"]').on('click', function(e) {
+	e.preventDefault();
+	var id = $(this).attr('href'),
+			targetOffset = $(id).offset().top;
+			
+	$('html, body').animate({ 
+		scrollTop: targetOffset - 100
+	}, 500);
+});
+</script>
+
 
 </body>
 </html>

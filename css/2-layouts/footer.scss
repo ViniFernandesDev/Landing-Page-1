@@ -24,3 +24,88 @@
   FOOTER
   ========================================
 */
+
+footer {
+  background: main.$ColorMain url("../images/footer.jpg") top center no-repeat;
+  margin-top: -150px;
+  padding: 185px 0 40px 0;
+
+  & .display {
+    display: flex;
+    gap: 0 180px;
+
+    & .left {
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 100px 0;
+
+      & .logo {
+        width: 185px;
+      }
+
+      & > a {
+        font-size: reset.toRem(16);
+        color: main.$ColorTwo;
+        font-weight: 700;
+        margin-bottom: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      & .social {
+        display: flex;
+        gap: 5px 22px;
+
+        & li a img {
+          box-shadow: 0px 13px 18px 0px #11132314;
+          border-radius: 50%;
+        }
+      }
+    } // LEFT
+
+    & .right {
+      display: flex;
+      gap: 15px 90px;
+      padding-top: 60px;
+
+      & ul li {
+        margin-bottom: 15px;
+      }
+
+      & a {
+        font-size: reset.toRem(16);
+        color: main.$ColorTwo;
+        font-weight:500;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  & h2 {
+    font-size: reset.toRem(22);
+    color: main.$ColorTwo;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  & .textInfo {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 22px;
+    margin-bottom: 30px;
+
+    & div {
+      width: 800px;
+      font-size: reset.toRem(11);
+      font-weight: 400;
+      color: main.$ColorTwo;
+    }
+  }
+
+  & .copy {
+    font-size: reset.toRem(15);
+    font-weight: 400;
+    color: main.$ColorTwo;
+  }
+}

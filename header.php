@@ -27,6 +27,8 @@
 
         <div class="navigation">
             <div class="menu">
+                <div class="button"></div>
+
                 <nav>
                     <ul>
                         <li><a href="#section1">A EMPRESA</a></li>

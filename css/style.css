@@ -182,26 +182,31 @@ header .container .navigation .special_links .no_bg {
   background: transparent;
 }
 header.fixed {
-  background: rgba(255, 255, 255, 0.9);
-}
-header.fixed .container {
-  height: 90px;
-}
-header.fixed .container .navigation nav ul li a {
-  font-size: 1.125rem;
-}
-header.fixed .container .navigation .buttonType1 {
-  font-size: 1rem;
+  background: rgba(2, 10, 57, 0.5);
+  z-index: 100;
 }
 
 /********
 RESPONSIVO
 ********/
+/* DESKTOP LARGE - 1400px*/
+@media screen and (max-width: 87.5rem) {
+  header .container .navigation nav ul li a {
+    padding: 10px 10px;
+    font-size: 0.8125rem;
+  }
+}
 /* DESKTOP - 1200px*/
 @media (max-width: 75rem) {
-  header .container .navigation nav ul li a {
-    font-size: 1.125rem;
-    padding: 10px 15px;
+  header special_links .buttonType1 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid #56D7AF;
+    background: #56D7AF;
+    border-radius: 30px;
   }
 }
 /* LAPTOP - 1024px*/
@@ -291,6 +296,78 @@ RESPONSIVO
   FOOTER
   ========================================
 */
+footer {
+  background: #56D7AF url("../images/footer.jpg") top center no-repeat;
+  margin-top: -150px;
+  padding: 185px 0 40px 0;
+}
+footer .display {
+  display: flex;
+  gap: 0 180px;
+}
+footer .display .left {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 100px 0;
+}
+footer .display .left .logo {
+  width: 185px;
+}
+footer .display .left > a {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+footer .display .left .social {
+  display: flex;
+  gap: 5px 22px;
+}
+footer .display .left .social li a img {
+  box-shadow: 0px 13px 18px 0px rgba(17, 19, 35, 0.0784313725);
+  border-radius: 50%;
+}
+footer .display .right {
+  display: flex;
+  gap: 15px 90px;
+  padding-top: 60px;
+}
+footer .display .right ul li {
+  margin-bottom: 15px;
+}
+footer .display .right a {
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+footer h2 {
+  font-size: 1.375rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+footer .textInfo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+  margin-bottom: 30px;
+}
+footer .textInfo div {
+  width: 800px;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+footer .copy {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 /*
   ========================================
   INDEX
@@ -298,7 +375,7 @@ RESPONSIVO
 */
 .banner {
   height: 810px;
-  background: #05193b url("../images/banner.jpg") right center no-repeat;
+  background: #020a39 url("../images/banner.jpg") right center no-repeat;
 }
 .banner .container {
   display: flex;
@@ -321,7 +398,12 @@ RESPONSIVO
   ========================================
 */
 .contentEmpresa {
-  background: #ffffff url("../images/bg_empresa.jpg") left center no-repeat;
+  background: #ffffff;
+}
+.contentEmpresa .containerLarge {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: url("../images/bg_empresa.jpg") left center no-repeat;
 }
 .contentEmpresa .container {
   height: 560px;
@@ -333,6 +415,7 @@ RESPONSIVO
   width: 550px;
   height: 100%;
   display: flex;
+  align-items: center;
   align-items: center;
   padding: 0 0 0 75px;
 }
@@ -558,17 +641,6 @@ RESPONSIVO
   width: 265px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-}
-
-/*
-  ========================================
-  FOOTER
-  ========================================
-*/
-footer {
-  background: url("../images/footer.jpg") top center no-repeat;
-  margin-top: -150px;
-  padding-top: 180px;
 }
 
 /*

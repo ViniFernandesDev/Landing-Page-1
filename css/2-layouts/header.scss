@@ -63,23 +63,8 @@ header {
   } //CONTAINER
 
   &.fixed {
-    background: rgb(255 255 255 / 90%);
-
-    & .container {
-      height: 90px;
-
-      & .navigation {  
-        & nav ul {
-          & li a {
-            font-size: reset.toRem(18);
-          }
-        }
-
-        & .buttonType1 {
-          font-size: reset.toRem(16);
-        }
-      }
-    }
+    background: rgb(2 10 57 / 50%);
+    z-index: 100;
   }
 }
 
@@ -87,20 +72,33 @@ header {
 RESPONSIVO
 ********/
 
-/* DESKTOP - 1200px*/ 
-
-@include main.breakpoint(smashDesktop) {
+/* DESKTOP LARGE - 1400px*/ 
+@include main.breakpoint(smashDesktopLarge) {
   header {
     & .container {
       & .navigation {
         & nav ul {
           & li a {
-            font-size: reset.toRem(18);
-            padding: 10px 15px;
+            padding: 10px 10px;
+            font-size: reset.toRem(13);
           }
         }
       }
     }
+  }
+}
+
+/* DESKTOP - 1200px*/ 
+@include main.breakpoint(smashDesktop) {
+  header special_links .buttonType1 {
+    font-size: reset.toRem(14);
+    font-weight: 600;
+    color: main.$ColorTwo;
+    padding: 10px 20px;
+    height: 45px;
+    border: 2px solid main.$ColorMain;
+    background: main.$ColorMain;
+    border-radius: 30px;
   }
 }
 

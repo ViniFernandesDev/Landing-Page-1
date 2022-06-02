@@ -17,19 +17,23 @@
 </section><!--banner-->
 
 <section id="section1" class="contentEmpresa">
-    <div class="container">
+    <div class="containerLarge">
 
-        <div class="content">
-            <div>
-                <h1><mark>A</mark> empresa</h1>
+        <div class="container">
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. <b>Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</b> Etiam suscipit consequat dolor, dignissim dictum neque pulvinar pharetra. Sed mattis euismod lorem at egestas.</p>
+            <div class="content">
+                <div>
+                    <h1><mark>A</mark> empresa</h1>
 
-                <div><a href="#" class="buttonType1">SABER MAIS</a></div>
-            </div>
-        </div><!--content-->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. <b>Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</b> Etiam suscipit consequat dolor, dignissim dictum neque pulvinar pharetra. Sed mattis euismod lorem at egestas.</p>
 
-    </div><!--container-->
+                    <div><a href="#" class="buttonType1">SABER MAIS</a></div>
+                </div>
+            </div><!--content-->
+
+        </div><!--container-->
+
+    </div><!--containerLarge-->
 </section><!--contentEmpresa-->
 
 <section id="section2" class="contentNumbers">
@@ -104,19 +108,19 @@
 
                 <li>
                     <img src="images/ico_fundo.png" alt="Ícone Fundo">
-                    <h2>FUNDO 1</h2>
+                    <h2>FUNDO 2</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
                 </li>
 
                 <li>
                     <img src="images/ico_fundo.png" alt="Ícone Fundo">
-                    <h2>FUNDO 1</h2>
+                    <h2>FUNDO 3</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
                 </li>
 
                 <li>
                     <img src="images/ico_fundo.png" alt="Ícone Fundo">
-                    <h2>FUNDO 1</h2>
+                    <h2>FUNDO 4</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
                 </li>
 
