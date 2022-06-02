@@ -7,82 +7,21 @@
   ========================================
 */
 
-.inputs input[type="submit"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    outline: none;
-    cursor:pointer;
-    font-size: reset.toRem(18);
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-    padding: reset.toRem(10) reset.toRem(12);
-    color: main.$ColorOne;
-    transition: 0.3s all;
-    background: main.$ColorMain;
-    background-repeat: no-repeat;
-    border: 1px solid main.$ColorMain;
-    width: 200px;
-}
-
-
-.inputs input[type="submit"]:hover {
-    background: main.$ColorOne; 
-    border: 1px solid main.$ColorOne;
-    background-repeat: no-repeat;
-}
-
-/* BUTTONS */
-
-.inputs {
-
-    & .inputs-content {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    & .margin {
-        margin-bottom: 30px;
-    }
-
-}
-
-.inputs label {
-    width: 100%;
-    display: block;
-    margin-bottom: 12px;
-    font-size: reset.toRem(15);
-    color:#333333;
-    letter-spacing: 0;
-}
-
-.inputs input {
-    width: 100%;
-}
-
-.inputs input[type="text"], 
-.inputs textarea {
+.inputs input[type="text"] {
       width: 100%;
       -webkit-appearance: none !important;
       -moz-appearance:     none !important;
-      padding: reset.toRem(8) reset.toRem(25);
-      font-size: reset.toRem(20);
-      font-weight: 700;
+      padding: reset.toRem(18) reset.toRem(25);
+      font-size: reset.toRem(16);
+      font-weight: 400;
       background:#ffffff;
-      border: 2px solid main.$ColorOne;
+      border: 1px solid #e0e0e0;
       outline: none;
-      color: main.$ColorOne;
-      font-family: "Open Sans", sans-serif;
-      transition: all 0.5s ease;
-      border-radius: 30px;
+      color: #4F5665;
+      font-family: "Montserrat", sans-serif;
+      transition: all 0.3s ease; 
   }
 
-  .input_center input[type="text"] {
-      text-align: center;
-  }
-  
   .inputs textarea:focus,
   .inputs input:focus {
       border: 2px solid main.$ColorMain;
@@ -93,6 +32,28 @@
   .inputs ::-webkit-input-placeholder {
       color: main.$ColorOne;
   }
+
+
+  .inputs input[type="submit"] {
+    outline: none;
+    cursor:pointer;
+    font-size: reset.toRem(18);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    padding: reset.toRem(10) reset.toRem(12);
+    color: #ffffff;
+    transition: 0.3s all;
+    background: main.$ColorMain;
+    background-repeat: no-repeat;
+    border: 1px solid main.$ColorMain;
+}
+
+
+.inputs input[type="submit"]:hover {
+    background: main.$ColorOne; 
+    border: 1px solid main.$ColorOne;
+    background-repeat: no-repeat;
+}
 
 
 /* TABLET - 600px*/ 

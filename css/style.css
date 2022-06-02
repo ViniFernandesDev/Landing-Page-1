@@ -101,11 +101,12 @@ body {
 
 p {
   font-family: "Montserrat", sans-serif;
-  line-height: 1.5;
+  line-height: 1.7;
   font-weight: 400;
   margin-bottom: 20px;
   font-size: 1rem;
   color: #00193C;
+  letter-spacing: 0.4px;
 }
 
 /*CONTAINER*/
@@ -424,6 +425,154 @@ RESPONSIVO
 
 /*
   ========================================
+  FUNDOS
+  ========================================
+*/
+.contentFundos {
+  position: relative;
+  padding-bottom: 150px;
+  background: -moz-linear-gradient(top, rgba(252, 252, 252, 0.42) -19800%, rgba(253, 253, 253, 0.42) -14400%, rgb(255, 255, 255) 0%);
+  background: -webkit-linear-gradient(top, rgba(252, 252, 252, 0.42) -19800%, rgba(253, 253, 253, 0.42) -14400%, rgb(255, 255, 255) 0%);
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.42) -19800%, rgba(253, 253, 253, 0.42) -14400%, rgb(255, 255, 255) 0%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#6bfcfcfc", endColorstr="#ffffff",GradientType=0 );
+}
+.contentFundos::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 370px;
+  background: #05193b;
+}
+.contentFundos .container {
+  background: -moz-linear-gradient(top, rgba(242, 237, 238, 0.42) -19800%, rgba(246, 241, 241, 0.42) -14400%, rgb(255, 250, 250) 0%);
+  background: -webkit-linear-gradient(top, rgba(242, 237, 238, 0.42) -19800%, rgba(246, 241, 241, 0.42) -14400%, rgb(255, 250, 250) 0%);
+  background: linear-gradient(to bottom, rgba(242, 237, 238, 0.42) -19800%, rgba(246, 241, 241, 0.42) -14400%, rgb(255, 250, 250) 0%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#6bf2edee", endColorstr="#fffafa",GradientType=0 );
+  padding-bottom: 100px;
+}
+.contentFundos .textTop {
+  height: 460px;
+  background: #fffafa;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.contentFundos .textTop .boxBig {
+  width: 640px;
+  padding: 50px 0 0 50px;
+}
+.contentFundos .textTop .boxBig h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #56D7AF;
+  padding: 0 0 0 35px;
+  background: url("../images/retangulo.png") left center no-repeat;
+  margin-bottom: 25px;
+}
+.contentFundos .textTop .boxSmall {
+  width: 605px;
+  height: 350px;
+  background: #56D7AF;
+  position: relative;
+  top: 106px;
+  z-index: 2;
+  padding: 80px 105px 0 65px;
+  font-size: 2.25rem;
+  color: #00193C;
+  font-weight: 700;
+}
+.contentFundos .textTop .boxSmall::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -106px;
+  right: 0;
+  width: 540px;
+  height: 106px;
+  background: #05193b;
+}
+.contentFundos .listFundos ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contentFundos .listFundos ul li {
+  width: 605px;
+}
+.contentFundos .listFundos ul li img {
+  margin-bottom: 20px;
+}
+.contentFundos .listFundos ul li h2 {
+  font-size: 1.25rem;
+  color: #00193C;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.contentFundos .listFundos ul li p {
+  margin-bottom: 35px;
+}
+.contentFundos .listFundos .center {
+  width: 100%;
+  text-align: center;
+}
+
+/*
+  ========================================
+  NEWSLETTER
+  ========================================
+*/
+.contentNewsletter {
+  margin-top: -150px;
+  position: relative;
+}
+.contentNewsletter .container {
+  background: #ffffff;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.contentNewsletter .container h2 {
+  font-size: 2.25rem;
+  color: #00193C;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+.contentNewsletter .container .inputs form {
+  display: flex;
+}
+.contentNewsletter .container .inputs input[type=text] {
+  width: 480px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+}
+.contentNewsletter .container .inputs input[type=submit] {
+  width: 265px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/*
+  ========================================
+  FOOTER
+  ========================================
+*/
+footer {
+  background: url("../images/footer.jpg") top center no-repeat;
+  margin-top: -150px;
+  padding-top: 180px;
+}
+
+/*
+  ========================================
   BUTTONS
   ========================================
 */
@@ -443,73 +592,19 @@ RESPONSIVO
   INPUTS
   ========================================
 */
-.inputs input[type=submit] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 30px;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.125rem;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-  padding: 0.625rem 0.75rem;
-  color: #00193C;
-  transition: 0.3s all;
-  background: #56D7AF;
-  background-repeat: no-repeat;
-  border: 1px solid #56D7AF;
-  width: 200px;
-}
-
-.inputs input[type=submit]:hover {
-  background: #00193C;
-  border: 1px solid #00193C;
-  background-repeat: no-repeat;
-}
-
-/* BUTTONS */
-.inputs .inputs-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.inputs .margin {
-  margin-bottom: 30px;
-}
-
-.inputs label {
-  width: 100%;
-  display: block;
-  margin-bottom: 12px;
-  font-size: 0.9375rem;
-  color: #333333;
-  letter-spacing: 0;
-}
-
-.inputs input {
-  width: 100%;
-}
-
-.inputs input[type=text],
-.inputs textarea {
+.inputs input[type=text] {
   width: 100%;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-  padding: 0.5rem 1.5625rem;
-  font-size: 1.25rem;
-  font-weight: 700;
+  padding: 1.125rem 1.5625rem;
+  font-size: 1rem;
+  font-weight: 400;
   background: #ffffff;
-  border: 2px solid #00193C;
+  border: 1px solid #e0e0e0;
   outline: none;
-  color: #00193C;
-  font-family: "Open Sans", sans-serif;
-  transition: all 0.5s ease;
-  border-radius: 30px;
-}
-
-.input_center input[type=text] {
-  text-align: center;
+  color: #4F5665;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease;
 }
 
 .inputs textarea:focus,
@@ -520,6 +615,26 @@ RESPONSIVO
 /**/
 .inputs ::-webkit-input-placeholder {
   color: #00193C;
+}
+
+.inputs input[type=submit] {
+  outline: none;
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  padding: 0.625rem 0.75rem;
+  color: #ffffff;
+  transition: 0.3s all;
+  background: #56D7AF;
+  background-repeat: no-repeat;
+  border: 1px solid #56D7AF;
+}
+
+.inputs input[type=submit]:hover {
+  background: #00193C;
+  border: 1px solid #00193C;
+  background-repeat: no-repeat;
 }
 
 /* TABLET - 600px*/

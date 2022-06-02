@@ -154,3 +154,177 @@
     }
   }
 }
+
+/*
+  ========================================
+  FUNDOS
+  ========================================
+*/
+
+.contentFundos {
+  position: relative;
+  padding-bottom: 150px;
+
+  background: -moz-linear-gradient(top, rgba(252,252,252,0.42) -19800%, rgba(253,253,253,0.42) -14400%, rgba(255,255,255,1) 0%);
+  background: -webkit-linear-gradient(top, rgba(252,252,252,0.42) -19800%,rgba(253,253,253,0.42) -14400%,rgba(255,255,255,1) 0%);
+  background: linear-gradient(to bottom, rgba(252,252,252,0.42) -19800%,rgba(253,253,253,0.42) -14400%,rgba(255,255,255,1) 0%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bfcfcfc', endColorstr='#ffffff',GradientType=0 );
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 370px;
+    background: main.$ColorThree;
+  }
+
+  & .container {
+    background: -moz-linear-gradient(top, rgba(242,237,238,0.42) -19800%, rgba(246,241,241,0.42) -14400%, rgba(255,250,250,1) 0%);
+    background: -webkit-linear-gradient(top, rgba(242,237,238,0.42) -19800%,rgba(246,241,241,0.42) -14400%,rgba(255,250,250,1) 0%);
+    background: linear-gradient(to bottom, rgba(242,237,238,0.42) -19800%,rgba(246,241,241,0.42) -14400%,rgba(255,250,250,1) 0%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bf2edee', endColorstr='#fffafa',GradientType=0 );
+
+    padding-bottom: 100px;
+  }
+
+  & .textTop {
+    height: 460px;
+    background: #fffafa;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+
+    & .boxBig {
+      width: 640px;
+      padding: 50px 0 0 50px;
+
+      & h1 {
+        font-size: reset.toRem(48);
+        font-weight: 700;
+        color: main.$ColorMain;
+        padding: 0 0 0 35px;
+        background: url("../images/retangulo.png") left center no-repeat;
+        margin-bottom: 25px;
+      }
+    }
+
+    & .boxSmall {
+      width: 605px;
+      height: 350px;
+      background: main.$ColorMain;
+      position: relative;
+      top: 106px;
+      z-index: 2;
+      padding: 80px 105px 0 65px;
+      font-size: reset.toRem(36);
+      color: main.$ColorOne;
+      font-weight: 700;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top:-106px;
+        right: 0;
+        width: 540px;
+        height: 106px;
+        background: main.$ColorThree;
+      }
+    }
+  }
+
+  & .listFundos {
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      & li {
+        width: 605px;
+
+        & img {
+          margin-bottom: 20px;
+        }
+
+        & h2 {
+          font-size: reset.toRem(20);
+          color: main.$ColorOne;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+
+        & p {
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    & .center {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+/*
+  ========================================
+  NEWSLETTER
+  ========================================
+*/
+
+.contentNewsletter {
+    margin-top: -150px;
+    position: relative;
+
+    & .container {
+      background: #ffffff;
+      height: 280px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      & h2 {
+        font-size: reset.toRem(36);
+        color: main.$ColorOne;
+        font-weight: 700;
+        margin-bottom: 40px;
+        letter-spacing: 0.5px;
+      }
+
+      & .inputs form {
+        display: flex;
+      }
+
+      & .inputs input[type="text"] {
+        width: 480px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-right: none;
+      }
+
+      & .inputs input[type="submit"] {
+        width: 265px;
+        border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      }
+    }
+}
+
+/*
+  ========================================
+  FOOTER
+  ========================================
+*/
+
+footer {
+  background: url("../images/footer.jpg") top center no-repeat;
+  margin-top: -150px;
+  padding-top: 180px;
+}

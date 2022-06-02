@@ -78,5 +78,73 @@
     </div><!--container-->
 </section><!--contentEmpresa-->
 
+<section id="section3" class="contentFundos">
+    <div class="container">
+
+        <div class="textTop">
+            <div class="boxBig">
+                <h1>Fundos</h1>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis. Etiam suscipit consequat dolor, dignissim dictum neque pulvinar pharetra.</p>
+            </div><!--boxBig-->
+
+            <div class="boxSmall">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </div><!--boxSmall-->
+        </div><!--textTop-->
+
+        <div class="listFundos">
+            <ul>
+
+                <li>
+                    <img src="images/ico_fundo.png" alt="Ícone Fundo">
+                    <h2>FUNDO 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
+                </li>
+
+                <li>
+                    <img src="images/ico_fundo.png" alt="Ícone Fundo">
+                    <h2>FUNDO 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
+                </li>
+
+                <li>
+                    <img src="images/ico_fundo.png" alt="Ícone Fundo">
+                    <h2>FUNDO 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
+                </li>
+
+                <li>
+                    <img src="images/ico_fundo.png" alt="Ícone Fundo">
+                    <h2>FUNDO 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus tempor tellus non cursus. Donec nisl metus, sagittis at convallis at, laoreet eu nulla. Duis mattis luctus tellus at venenatis. Fusce molestie neque pulvinar magna ultrices, vel lobortis mauris mattis.</p>
+                </li>
+
+            </ul>
+
+            <div class="center">
+                <a href="#" class="buttonType1">SABER MAIS</a>
+            </div><!--center-->
+        </div><!--listFundos-->
+
+    </div><!--container-->
+</section><!--contentFundos-->
+
+<section class="contentNewsletter">
+    <div class="container">
+
+        <div class="content">
+            <h2>Inscreva-se na nossa Newsletter</h2>
+
+            <div class="inputs">
+                <form action="">
+                    <input type="text" placeholder="contato@santins.com.br" required="">
+                    <input type="submit" value="Assinar Newsletter">
+                </form>
+            </div>
+        </div><!--content-->
+
+    </div><!--container-->
+</section><!--contentNewsletter-->
 
 <?php include 'footer.php';?>
