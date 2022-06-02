@@ -21,7 +21,7 @@
             </div><!--left-->
 
             <div class="right">
-                <div>
+                <div class="menu_footer">
                     <h2>Menu</h2>
 
                     <ul>

@@ -383,6 +383,71 @@ footer .copy {
   color: #ffffff;
 }
 
+/********
+RESPONSIVE
+*********/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  footer {
+    margin-top: 0;
+    padding: 30px 0;
+  }
+  footer .display {
+    display: flex;
+    gap: 0;
+  }
+  footer .display .left {
+    width: 66%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  footer .display .left > a {
+    margin-bottom: 0;
+  }
+  footer .display .left .logo {
+    display: none;
+  }
+  footer .display .right {
+    width: 33%;
+    padding-top: 0;
+    justify-content: center;
+  }
+  footer .display .right .menu_footer {
+    display: none;
+  }
+  footer .textInfo {
+    justify-content: center;
+    margin-top: 30px;
+  }
+  footer .textInfo div {
+    width: 100%;
+    text-align: center;
+  }
+  footer .copy {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: #ffffff;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  footer .display {
+    flex-wrap: wrap;
+    gap: 15px 0;
+    text-align: center;
+  }
+  footer .display .left {
+    width: 100%;
+    gap: 15px;
+  }
+  footer .display .right {
+    width: 100%;
+  }
+  footer h2 {
+    margin-bottom: 5px;
+  }
+}
 /*
   ========================================
   INDEX
@@ -407,6 +472,27 @@ footer .copy {
   letter-spacing: 0.1em;
 }
 
+/********
+RESPONSIVE
+*********/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .banner {
+    height: 600px;
+  }
+  .banner .container h1 {
+    font-size: 1.875rem;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  .banner {
+    height: 450px;
+  }
+  .banner .container h1 {
+    font-size: 1.5625rem;
+  }
+}
 /*
   ========================================
   A EMPRESA
@@ -431,7 +517,6 @@ footer .copy {
   height: 100%;
   display: flex;
   align-items: center;
-  align-items: center;
   padding: 0 0 0 75px;
 }
 .contentEmpresa .container .content h1 {
@@ -454,6 +539,45 @@ footer .copy {
   font-weight: 700;
 }
 
+/********
+RESPONSIVE
+*********/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .contentEmpresa {
+    background: #ffffff;
+  }
+  .contentEmpresa .containerLarge {
+    background: none;
+  }
+  .contentEmpresa .container {
+    height: auto;
+    justify-content: flex-start;
+  }
+  .contentEmpresa .container .content {
+    width: 100%;
+    padding: 30px;
+  }
+  .contentEmpresa .container .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .contentEmpresa .container .content p {
+    margin-bottom: 30px;
+  }
+  .contentEmpresa .container .content div a {
+    display: inline-block;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .contentEmpresa .container .content {
+    padding: 30px 0;
+  }
+  .contentEmpresa .container .content h1 {
+    font-size: 1.875rem;
+  }
+}
 /*
   ========================================
   NUMEROS
@@ -521,6 +645,52 @@ footer .copy {
   color: #8a8a8a;
 }
 
+/********
+RESPONSIVE
+*********/
+/* DESKTOP - 1200px*/
+@media (max-width: 75rem) {
+  .contentNumbers {
+    padding: 40px 0 80px 0;
+  }
+}
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .contentNumbers .container ul {
+    flex-wrap: wrap;
+    gap: 20px 2%;
+  }
+  .contentNumbers .container ul li {
+    width: 30%;
+  }
+  .contentNumbers .container ul li .text_green {
+    font-size: 2.5rem;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .contentNumbers .container ul li .text_green small {
+    font-size: 0.875rem;
+  }
+  .contentNumbers .container ul li .text_down {
+    font-size: 0.8125rem;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .contentNumbers {
+    padding: 30px 0;
+  }
+  .contentNumbers .container ul li .text_green {
+    font-size: 1.875rem;
+    height: 40px;
+  }
+}
+/* MOBILE - 400px*/
+@media (max-width: 25rem) {
+  .contentNumbers .container ul li {
+    width: 48%;
+  }
+}
 /*
   ========================================
   FUNDOS
@@ -590,7 +760,7 @@ footer .copy {
   z-index: 1;
   top: -106px;
   right: 0;
-  width: 540px;
+  width: 88%;
   height: 106px;
   background: #05193b;
 }
@@ -658,6 +828,67 @@ footer .copy {
   border-bottom-right-radius: 25px;
 }
 
+/********
+RESPONSIVE
+*********/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .contentNewsletter {
+    margin-top: 0;
+  }
+  .contentNewsletter .container {
+    padding: 30px 0;
+    height: auto;
+  }
+  .contentNewsletter .container .content {
+    width: 80%;
+  }
+  .contentNewsletter .container .content h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+  .contentNewsletter .container .content .inputs form {
+    justify-content: center;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .contentNewsletter .container .content {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .contentNewsletter .container .content h2 {
+    font-size: 1.375rem;
+    margin-bottom: 20px;
+  }
+  .contentNewsletter .container .inputs input[type=text] {
+    font-size: 0.9375rem;
+  }
+  .contentNewsletter .container .inputs input[type=submit] {
+    font-size: 1rem;
+  }
+}
+/* MOBILE - 400px*/
+@media (max-width: 25rem) {
+  .contentNewsletter .container .content h2 {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+  }
+  .contentNewsletter .container .inputs form {
+    flex-wrap: wrap;
+  }
+  .contentNewsletter .container .inputs form input[type=text] {
+    width: 100%;
+    border-radius: 25px;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .contentNewsletter .container .inputs form input[type=submit] {
+    width: 100%;
+    border-radius: 25px;
+  }
+}
 /*
   ========================================
   BUTTONS

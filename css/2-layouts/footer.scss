@@ -109,3 +109,85 @@ footer {
     color: main.$ColorTwo;
   }
 }
+
+/********
+RESPONSIVE
+*********/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  footer {
+    margin-top: 0;
+    padding: 30px 0;
+  
+    & .display {
+      display: flex;
+      gap: 0;
+  
+      & .left {
+        width: 66%;
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-around;
+
+        & > a {
+          margin-bottom: 0;
+        }
+
+        & .logo {
+          display: none;
+        }
+      } // LEFT
+  
+      & .right {
+        width: 33%;
+        padding-top: 0;
+        justify-content: center;
+
+        & .menu_footer {
+          display: none;
+        }
+      }
+    }
+  
+    & .textInfo {
+      justify-content: center;
+      margin-top: 30px;
+  
+      & div {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  
+    & .copy {
+      font-size: reset.toRem(15);
+      font-weight: 400;
+      color: main.$ColorTwo;
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  footer {
+    & .display {
+      flex-wrap: wrap;
+      gap: 15px 0;
+      text-align: center;
+  
+      & .left {
+        width: 100%;
+        gap: 15px;
+      } // LEFT
+  
+      & .right {
+        width:100%;
+      }
+    }
+
+    & h2 {
+      margin-bottom: 5px;
+    }
+  }
+}

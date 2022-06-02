@@ -28,6 +28,37 @@
   }
 }
 
+/********
+RESPONSIVE
+*********/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) { 
+  .banner {
+    height: 600px;
+
+    & .container {
+      & h1 {
+        font-size: reset.toRem(30);
+      }
+    }
+  }
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  .banner {
+    height: 450px;
+
+    & .container {
+      & h1 {
+        font-size: reset.toRem(25);
+      }
+    }
+  }
+}
+
+
 /*
   ========================================
   A EMPRESA
@@ -54,8 +85,6 @@
       height: 100%;
       display: flex;
       align-items: center;
-      align-items: center;
-
       padding: 0 0 0 75px;
 
       & h1 {
@@ -78,6 +107,59 @@
 
         & b {
           font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+/********
+RESPONSIVE
+*********/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .contentEmpresa {
+    background: main.$ColorTwo;
+  
+    & .containerLarge {
+      background: none;
+    }
+  
+    & .container {
+      height: auto;
+      justify-content: flex-start;
+  
+      & .content {
+        width: 100%;
+        padding: 30px;
+  
+        & h1 {
+          font-size: reset.toRem(40);
+          margin-bottom: 20px;
+        }
+  
+        & p {
+          margin-bottom: 30px;
+        }
+
+        & div a {
+          display:inline-block;
+        }
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .contentEmpresa {
+    & .container {
+      & .content {
+        padding: 30px 0;
+
+        & h1 {
+          font-size: reset.toRem(30);
         }
       }
     }
@@ -163,6 +245,81 @@
   }
 }
 
+/********
+RESPONSIVE
+*********/
+
+/* DESKTOP - 1200px*/ 
+@include main.breakpoint(smashDesktop) {
+  .contentNumbers {
+    padding: 40px 0 80px 0;
+  }
+}
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .contentNumbers {  
+    & .container {
+      & ul {
+        flex-wrap: wrap;
+        gap: 20px 2%;
+  
+        & li {
+          width: 30%;
+
+          & .text_green {
+            font-size: reset.toRem(40);
+            height: 60px;
+            margin-bottom: 15px;
+            
+            & small {
+              font-size: reset.toRem(14);
+            }
+          }
+
+          & .text_down {
+            font-size: reset.toRem(13); 
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .contentNumbers {  
+    padding: 30px 0;
+
+    & .container {
+      & ul {
+        & li {
+
+          & .text_green {
+            font-size: reset.toRem(30);
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MOBILE - 400px*/ 
+@include main.breakpoint(smashMobile) {
+  .contentNumbers {  
+    & .container {
+      & ul {  
+        & li {
+          width: 48%;
+        }
+      }
+    }
+  }
+}
+
+
+
 /*
   ========================================
   FUNDOS
@@ -239,7 +396,7 @@
         z-index: 1;
         top:-106px;
         right: 0;
-        width: 540px;
+        width: 88%;
         height: 106px;
         background: main.$ColorThree;
       }
@@ -325,3 +482,88 @@
     }
 }
 
+/********
+RESPONSIVE
+*********/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .contentNewsletter {
+    margin-top: 0;
+
+    & .container {
+      padding: 30px 0;
+      height: auto;
+
+      & .content {
+        width: 80%;
+
+        & h2 {
+          font-size: reset.toRem(28);
+          margin-bottom: 20px;
+        }
+
+        & .inputs form {
+          justify-content: center;
+        }
+  
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .contentNewsletter {
+    & .container {
+      & .content {
+        width: 100%;
+        padding: 0 20px;
+
+        & h2 {
+          font-size: reset.toRem(22);
+          margin-bottom: 20px;
+        }
+      }
+
+      & .inputs input[type="text"] {
+        font-size: reset.toRem(15);
+      }
+
+      & .inputs input[type="submit"] {
+        font-size: reset.toRem(16);
+      }
+    }
+  }
+}
+
+/* MOBILE - 400px*/ 
+@include main.breakpoint(smashMobile) {
+  .contentNewsletter {
+    & .container {
+      & .content {
+        & h2 {
+          font-size: reset.toRem(18);
+          margin-bottom: 10px;
+        }
+      }
+
+      & .inputs form {
+        flex-wrap: wrap;
+
+        & input[type="text"] {
+          width: 100%;
+          border-radius: 25px;
+          border-right: 1px solid #e0e0e0;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+  
+        & input[type="submit"] {
+          width: 100%;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+}
