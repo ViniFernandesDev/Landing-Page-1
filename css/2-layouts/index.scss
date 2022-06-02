@@ -101,29 +101,53 @@
         justify-content: center;
         text-align: center;
         align-content:flex-start;
-        border: 1px solid red;
 
-        & span {
-          display: block;
+        & .text_green {
+          display: flex;
+          justify-content: center;
           width: 100%;
           color:main.$ColorMain;
           font-size: reset.toRem(50);
           font-weight: 700;
           height: 70px;
-          margin-bottom: 15px;
+          margin-bottom: 20px;
+          position: relative;
 
-          &.text_down {
-            color:main.$ColorTwo;
+          &::before {
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 33px;
+            border-radius: 5px;
+            background: main.$ColorMain;
+            bottom: -6px;
+          }
+
+          & small {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            font-size: reset.toRem(22);
+            font-weight: 600;
+            position: relative;
+            top: 8px;
+          }
+        }
+
+        & .text_down {
+          color:main.$ColorTwo;
+          font-size: reset.toRem(15);
+          font-weight: 700;
+          height: auto;
+
+          & small {
+            display: block;
+            width: 100%;
             font-size: reset.toRem(15);
-            font-weight: 700;
-            height: auto;
-
-            & small {
-              display: block;
-              width: 100%;
-              font-size: reset.toRem(15);
-              font-weight: 300;
-            }
+            font-weight: 300;
+            letter-spacing: 0;
+            color: #8a8a8a;
           }
         }
       }

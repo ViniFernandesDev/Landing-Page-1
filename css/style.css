@@ -376,28 +376,50 @@ RESPONSIVO
   justify-content: center;
   text-align: center;
   align-content: flex-start;
-  border: 1px solid red;
 }
-.contentNumbers .container ul li span {
-  display: block;
+.contentNumbers .container ul li .text_green {
+  display: flex;
+  justify-content: center;
   width: 100%;
   color: #56D7AF;
   font-size: 3.125rem;
   font-weight: 700;
   height: 70px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative;
 }
-.contentNumbers .container ul li span.text_down {
+.contentNumbers .container ul li .text_green::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 33px;
+  border-radius: 5px;
+  background: #56D7AF;
+  bottom: -6px;
+}
+.contentNumbers .container ul li .text_green small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  font-size: 1.375rem;
+  font-weight: 600;
+  position: relative;
+  top: 8px;
+}
+.contentNumbers .container ul li .text_down {
   color: #ffffff;
   font-size: 0.9375rem;
   font-weight: 700;
   height: auto;
 }
-.contentNumbers .container ul li span.text_down small {
+.contentNumbers .container ul li .text_down small {
   display: block;
   width: 100%;
   font-size: 0.9375rem;
   font-weight: 300;
+  letter-spacing: 0;
+  color: #8a8a8a;
 }
 
 /*
