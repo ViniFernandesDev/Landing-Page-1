@@ -1029,7 +1029,7 @@ RESPONSIVE
 
 .inputs textarea:focus,
 .inputs input:focus {
-  border: 2px solid #56D7AF;
+  border: 1px solid #56D7AF;
 }
 
 /**/

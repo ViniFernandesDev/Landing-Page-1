@@ -51,51 +51,7 @@
 </footer>
 
 <script src="js/jquery.min.js"></script>
-
-<!--header fixa-->
-<script>
-    $(window).scroll(function () {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop > 120) {
-            $('header').addClass('fixed');
-        } else {
-            $('header').removeClass('fixed');
-        }
-    });
-</script>
-
-<!-- MENU RESPONSIVO -->
-<script>
-    $('#toggle').click(function () {
-        $(this).toggleClass('active');
-        $('#overlay').toggleClass('open');
-    });
-
-    $(".overlay ul li a").click(function () {
-        $("#toggle").removeClass("active");
-        $("#overlay").removeClass("open");
-    })
-
-    $(document).ready(function() {
-        $('.menu').click(function() {
-            $(this).toggleClass("ativo");
-        });
-    });
-</script>
-
-<!-- HEADER SCROLL -->
-<script>
-$('.navigation a[href^="#"]').on('click', function(e) {
-	e.preventDefault();
-	var id = $(this).attr('href'),
-			targetOffset = $(id).offset().top;
-			
-	$('html, body').animate({ 
-		scrollTop: targetOffset - 120
-	}, 500);
-});
-</script>
-
+<script src="js/functions.js"></script>
 
 </body>
 </html>
