@@ -50,7 +50,7 @@ header {
 
 
           &:hover {
-            color: main.$ColorOne;
+            color: main.$ColorMain;
           }
         }
       }
@@ -61,14 +61,22 @@ header {
         
         & .no_bg {
           background: transparent;
+          
+          &:hover {
+            background: main.$ColorMain;
+          }
         }
       }
     }
   } //CONTAINER
 
   &.fixed {
-    background: rgb(2 10 57 / 50%);
+    background: rgb(2 10 57 / 60%);
     z-index: 100;
+
+    & .navigation .special_links .no_bg {
+      background: main.$ColorOne;
+    }
   }
 }
 

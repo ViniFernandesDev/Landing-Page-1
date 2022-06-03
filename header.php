@@ -20,7 +20,7 @@
     <div class="container">
 
         <div class="logo">
-            <a href="#secao">
+            <a href="#section0">
                 <img src="images/logo.svg" alt="Logo">
             </a>
         </div><!--logo-->

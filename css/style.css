@@ -120,14 +120,10 @@ p {
   max-width: 82.5rem;
 }
 
-@media (max-width: 64rem) {
-  p {
-    font-size: 1.125rem;
-  }
-}
 @media (max-width: 56.25rem) {
   p {
-    font-size: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.5;
   }
 }
 /*
@@ -175,7 +171,7 @@ header .container .navigation nav ul li a {
   padding: 10px 20px;
 }
 header .container .navigation nav ul li a:hover {
-  color: #00193C;
+  color: #56D7AF;
 }
 header .container .navigation .special_links {
   display: flex;
@@ -184,9 +180,15 @@ header .container .navigation .special_links {
 header .container .navigation .special_links .no_bg {
   background: transparent;
 }
+header .container .navigation .special_links .no_bg:hover {
+  background: #56D7AF;
+}
 header.fixed {
-  background: rgba(2, 10, 57, 0.5);
+  background: rgba(2, 10, 57, 0.6);
   z-index: 100;
+}
+header.fixed .navigation .special_links .no_bg {
+  background: #00193C;
 }
 
 /********
@@ -323,7 +325,6 @@ footer .display {
 footer .display .left {
   width: 280px;
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   gap: 100px 0;
 }
@@ -331,11 +332,16 @@ footer .display .left .logo {
   width: 185px;
 }
 footer .display .left > a {
+  display: block;
   font-size: 1rem;
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 15px;
   letter-spacing: 0.5px;
+  transition: 0.3s all;
+}
+footer .display .left > a:hover {
+  color: #00193C;
 }
 footer .display .left .social {
   display: flex;
@@ -358,6 +364,10 @@ footer .display .right a {
   color: #ffffff;
   font-weight: 500;
   letter-spacing: 0.5px;
+  transition: 0.3s all;
+}
+footer .display .right a:hover {
+  color: #00193C;
 }
 footer h2 {
   font-size: 1.375rem;
@@ -440,6 +450,10 @@ RESPONSIVE
   footer .display .left {
     width: 100%;
     gap: 15px;
+  }
+  footer .display .left .social {
+    width: 100%;
+    justify-content: center;
   }
   footer .display .right {
     width: 100%;
@@ -732,7 +746,7 @@ RESPONSIVE
 }
 .contentFundos .textTop .boxBig {
   width: 640px;
-  padding: 50px 0 0 50px;
+  padding: 50px 20px 0 50px;
 }
 .contentFundos .textTop .boxBig h1 {
   font-size: 3rem;
@@ -770,7 +784,7 @@ RESPONSIVE
   flex-wrap: wrap;
 }
 .contentFundos .listFundos ul li {
-  width: 605px;
+  width: 48%;
 }
 .contentFundos .listFundos ul li img {
   margin-bottom: 20px;
@@ -789,6 +803,90 @@ RESPONSIVE
   text-align: center;
 }
 
+/********
+RESPONSIVE
+*********/
+/* DESKTOP - 1200px*/
+@media (max-width: 75rem) {
+  .contentFundos .textTop .boxSmall {
+    width: 550px;
+    padding: 60px 80px 0 50px;
+    font-size: 1.875rem;
+  }
+}
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .contentFundos {
+    padding-bottom: 0;
+  }
+  .contentFundos .container {
+    padding-bottom: 35px;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  .contentFundos::before {
+    display: none;
+  }
+  .contentFundos .textTop {
+    height: auto;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .contentFundos .textTop .boxBig {
+    width: 100%;
+    padding: 30px;
+    padding-bottom: 0;
+  }
+  .contentFundos .textTop .boxBig h1 {
+    font-size: 2.5rem;
+  }
+  .contentFundos .textTop .boxSmall {
+    width: 100%;
+    height: auto;
+    top: inherit;
+    z-index: 2;
+    padding: 20px 35px;
+    font-size: 1.75rem;
+  }
+  .contentFundos .textTop .boxSmall::before {
+    display: none;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .contentFundos .textTop .boxBig {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .contentFundos .textTop .boxBig h1 {
+    font-size: 1.875rem;
+  }
+  .contentFundos .textTop .boxSmall {
+    padding: 15px 25px;
+    font-size: 1.125rem;
+  }
+  .contentFundos .listFundos ul li {
+    width: 100%;
+  }
+  .contentFundos .listFundos ul li img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .contentFundos .listFundos ul li h2 {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .contentFundos .listFundos ul li p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  .contentFundos .listFundos .center {
+    margin-top: 20px;
+  }
+}
 /*
   ========================================
   NEWSLETTER
@@ -903,6 +1001,10 @@ RESPONSIVE
   border: 2px solid #56D7AF;
   background: #56D7AF;
   border-radius: 30px;
+  transition: 0.3s all;
+}
+.buttonType1:hover {
+  background: #00193C;
 }
 
 /*

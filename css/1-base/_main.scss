@@ -75,17 +75,11 @@ p {
 
 // largureContainer -> BREAKPOINT DA LARGURA DO CONTAINER
 
-// LAPTOP - 1024px
-@include breakpoint(smashLaptop) {
-   p {
-      font-size: reset.toRem(18);
-   }
-}
-
 // TABLET BIG - 900px
 @include breakpoint(smashTabletBig) {
    p {
-      font-size: reset.toRem(16);
+      font-size: reset.toRem(15);
+      line-height: 1.5;
    }
 }
 

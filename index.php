@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 
-<section class="banner">
+<section id="section0" class="banner">
     <div class="container">
 
         <h1>
@@ -36,7 +36,7 @@
     </div><!--containerLarge-->
 </section><!--contentEmpresa-->
 
-<section id="section2" class="contentNumbers">
+<section class="contentNumbers">
     <div class="container">
 
         <ul>
@@ -82,7 +82,7 @@
     </div><!--container-->
 </section><!--contentEmpresa-->
 
-<section id="section3" class="contentFundos">
+<section id="section2" class="contentFundos">
     <div class="container">
 
         <div class="textTop">
@@ -134,7 +134,7 @@
     </div><!--container-->
 </section><!--contentFundos-->
 
-<section id="section4" class="contentNewsletter">
+<section id="section3" class="contentNewsletter">
     <div class="container">
 
         <div class="content">

@@ -37,7 +37,6 @@ footer {
     & .left {
       width: 280px;
       display: flex;
-      flex-direction: column;
       flex-wrap: wrap;
       gap: 100px 0;
 
@@ -46,11 +45,17 @@ footer {
       }
 
       & > a {
+        display: block;
         font-size: reset.toRem(16);
         color: main.$ColorTwo;
         font-weight: 700;
         margin-bottom: 15px;
         letter-spacing: 0.5px;
+        transition: 0.3s all;
+
+        &:hover {
+          color: main.$ColorOne;
+        }
       }
 
       & .social {
@@ -78,6 +83,11 @@ footer {
         color: main.$ColorTwo;
         font-weight:500;
         letter-spacing: 0.5px;
+        transition: 0.3s all;
+
+        &:hover {
+          color: main.$ColorOne;
+        }
       }
     }
   }
@@ -179,6 +189,11 @@ RESPONSIVE
       & .left {
         width: 100%;
         gap: 15px;
+
+        & .social {
+          width: 100%;
+          justify-content: center;
+        }
       } // LEFT
   
       & .right {

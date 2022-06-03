@@ -366,7 +366,7 @@ RESPONSIVE
 
     & .boxBig {
       width: 640px;
-      padding: 50px 0 0 50px;
+      padding: 50px 20px 0 50px;
 
       & h1 {
         font-size: reset.toRem(48);
@@ -410,7 +410,7 @@ RESPONSIVE
       flex-wrap: wrap;
 
       & li {
-        width: 605px;
+        width: 48%;
 
         & img {
           margin-bottom: 20px;
@@ -436,6 +436,122 @@ RESPONSIVE
   }
 }
 
+/********
+RESPONSIVE
+*********/
+
+/* DESKTOP - 1200px*/ 
+@include main.breakpoint(smashDesktop) {
+  .contentFundos {
+    & .textTop {
+      & .boxSmall {
+        width: 550px;
+        padding: 60px 80px 0 50px;
+        font-size: reset.toRem(30);
+      }
+    }
+  }
+}
+
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .contentFundos {
+    padding-bottom: 0;
+
+    & .container {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  .contentFundos {
+    &::before {
+      display: none;
+    }
+  
+    & .textTop {
+      height: auto;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+  
+      & .boxBig {
+        width: 100%;
+        padding: 30px;
+        padding-bottom: 0;
+  
+        & h1 {
+          font-size: reset.toRem(40);
+        }
+      }
+  
+      & .boxSmall {
+        width: 100%;
+        height: auto;
+        top: inherit;
+        z-index: 2;
+        padding: 20px 35px;
+        font-size: reset.toRem(28);
+  
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .contentFundos {
+    & .textTop {
+      & .boxBig {
+        padding: 20px;
+        padding-bottom: 0;
+  
+        & h1 {
+          font-size: reset.toRem(30);
+        }
+      }
+  
+      & .boxSmall {
+        padding: 15px 25px;
+        font-size: reset.toRem(18);
+      }
+    }
+
+    & .listFundos {
+      & ul {
+        & li {
+          width: 100%;
+  
+          & img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+          }
+  
+          & h2 {
+            font-size: reset.toRem(18);
+            margin-bottom: 10px;
+            text-align: center;
+          }
+  
+          & p {
+            margin-bottom: 20px;
+            text-align: justify;
+          }
+        }
+      }
+
+      & .center {
+        margin-top: 20px;
+      }
+    }
+  }
+}
 
 /*
   ========================================

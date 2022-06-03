@@ -2,7 +2,7 @@
 <footer>
     <div class="container">
 
-        <section class="display">
+        <section class="display" id="section4">
             <div class="left">
 
                 <div class="logo">
@@ -91,7 +91,7 @@ $('.navigation a[href^="#"]').on('click', function(e) {
 			targetOffset = $(id).offset().top;
 			
 	$('html, body').animate({ 
-		scrollTop: targetOffset - 100
+		scrollTop: targetOffset - 120
 	}, 500);
 });
 </script>
