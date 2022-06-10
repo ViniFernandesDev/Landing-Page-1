@@ -7,7 +7,7 @@
 
                 <div class="logo">
                     <a href="#secao">
-                        <img src="images/logo.svg" alt="Logo">
+                        <img src="images/logo.png" alt="Logo">
                     </a>
                 </div><!--logo-->
 
@@ -45,7 +45,7 @@
             </div>
         </section><!--textInfo-->
 
-        <span class="copy">@ 2022 Santins</span>
+        <span class="copy">@ 2022 </span>
 
     </div><!--container-->
 </footer>

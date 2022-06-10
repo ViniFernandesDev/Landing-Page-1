@@ -9,7 +9,7 @@
     
     <meta name="description" content="Lorem Ipsum"/>
 
-    <title>Landing Page Santins</title>
+    <title>Landing Page</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -21,7 +21,7 @@
 
         <div class="logo">
             <a href="#section0">
-                <img src="images/logo.svg" alt="Logo">
+                <img src="images/logo.png" alt="Logo">
             </a>
         </div><!--logo-->
 
