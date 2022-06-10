@@ -34,7 +34,7 @@
 
                 <div>
                     <h2>Contato</h2>
-                    <a href="mailto:contato@santins.com.br">contato@santins.com.br</a>
+                    <a href="mailto:contato@contato.com.br">contato@contato.com.br</a>
                 </div>
             </div><!--right-->
         </section><!--display-->
